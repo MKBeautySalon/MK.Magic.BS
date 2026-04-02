@@ -3,9 +3,12 @@ body {
     background-color: #fff0f5; /* Нежно-розовый фон */
     color: #333;
     text-align: center;
-    padding: 50px 20px; /* Немного изменил отступы для мобилок */
+    /* Уменьшаем боковые отступы, чтобы на телефоне было больше места для контента */
+    padding: 30px 10px; 
     margin: 0;
     display: block; 
+    /* Плавная прокрутка */
+    scroll-behavior: smooth;
 }
 
 header {
@@ -14,14 +17,29 @@ header {
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     margin-bottom: 30px;
+    /* Чтобы шапка была по центру и не на весь экран на ПК */
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
 }
 
-h1 { color: #d81b60; } /* Яркий розовый для заголовка */
+h1 { 
+    color: #d81b60; 
+    margin: 0;
+    font-size: 24px; /* Оптимальный размер для телефона */
+}
+
+p {
+    margin: 5px 0;
+}
 
 /* Стили для списка, чтобы он уходил вниз */
 ul {
     list-style: none;
     padding: 0;
+    margin: 0 auto;
+    width: 100%;
 }
 
 li {
@@ -29,8 +47,13 @@ li {
     margin: 10px auto;
     padding: 15px;
     border-radius: 10px;
-    max-width: 350px;
+    /* На телефоне карточка займет почти всю ширину, на ПК — максимум 400px */
+    width: 90%;
+    max-width: 400px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    /* Чтобы внутренние отступы не увеличивали ширину элемента */
+    box-sizing: border-box;
+    font-size: 16px;
 }
 
 button {
@@ -42,15 +65,21 @@ button {
     cursor: pointer;
     font-size: 18px;
     margin-top: 20px;
-    margin-bottom: 40px; /* Добавил отступ до футера */
+    margin-bottom: 40px; /* Отступ до футера */
+    width: 80%;
+    max-width: 300px;
+    transition: background-color 0.3s;
 }
 
-button:hover { background-color: #ad1457; }
+button:hover { 
+    background-color: #ad1457; 
+}
 
 /* Стили для подвала (контактов) */
 footer {
     padding: 20px;
     border-top: 1px solid rgba(216, 27, 96, 0.1);
+    margin-top: 20px;
 }
 
 footer p {
@@ -61,10 +90,10 @@ footer p {
 
 .contact-link {
     display: inline-block;
-    margin: 5px 0;
+    margin: 10px 0;
     color: #d81b60;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px; /* Увеличил, чтобы было удобно нажимать пальцем */
 }
 
 .contact-link:hover {
