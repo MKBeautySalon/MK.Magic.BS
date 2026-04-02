@@ -31,10 +31,9 @@ li {
     max-width: 400px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     box-sizing: border-box;
-    font-size: 16px;
 }
 
-/* ГАЛЕРЕЯ: Всегда 3 в ряд */
+/* ГАЛЕРЕЯ: 3 в ряд везде */
 .gallery {
     margin-top: 40px;
     width: 100%;
@@ -50,29 +49,22 @@ li {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    max-width: 1000px; /* Увеличил, чтобы на ноуте было широко */
+    max-width: 800px; /* Оптимально для ноута */
     margin: 0 auto;
     padding: 0 5px;
     box-sizing: border-box;
 }
 
 .photos img {
-    /* Жестко 33% ширины минус маленькие отступы */
+    /* Ровно по 3 в ряд */
     width: calc(33.33% - 10px); 
     margin: 5px;
-    aspect-ratio: 1 / 1; /* Квадраты */
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    border: 2px solid white;
+    background-color: #ddd; /* Серый фон, пока фото грузится */
     box-sizing: border-box;
-    transition: transform 0.2s;
-}
-
-/* Эффект для мышки (ноутбук) */
-.photos img:hover {
-    transform: scale(1.05);
-    z-index: 10;
 }
 
 footer {
