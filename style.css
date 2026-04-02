@@ -34,7 +34,7 @@ li {
     font-size: 16px;
 }
 
-/* ГАЛЕРЕЯ: Сетка 3х4 (по 3 в ряд везде) */
+/* ГАЛЕРЕЯ: Сетка 3 в ряд везде */
 .gallery {
     margin-top: 40px;
     width: 100%;
@@ -48,24 +48,32 @@ li {
 
 .photos {
     display: flex;
-    flex-wrap: wrap; /* Разрешаем перенос */
-    justify-content: flex-start; /* Фото прижимаются к левому краю, заполняя ряды */
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
-    max-width: 600px; /* Ограничил общую ширину, чтобы на компе не было слишком растянуто */
+    /* Увеличил до 900px, чтобы на ноуте фотки были крупнее и в ряд */
+    max-width: 900px; 
     margin: 0 auto;
-    padding: 0 5px; /* Небольшой отступ от краев экрана */
+    padding: 0 5px;
     box-sizing: border-box;
 }
 
 .photos img {
-    /* Ровно 1/3 ширины за вычетом зазоров */
-    width: calc(33.33% - 4px); 
-    margin: 2px; /* Маленький отступ между фото */
-    aspect-ratio: 1 / 1; /* Делаем идеальные квадраты */
-    object-fit: cover; /* Чтобы фото не деформировались */
-    border-radius: 4px; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* Ровно по 3 в ряд (минус отступы) */
+    width: calc(33.33% - 10px); 
+    margin: 5px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 2px solid white;
     box-sizing: border-box;
+    transition: transform 0.2s; /* Эффект при наведении мышкой */
+}
+
+/* На ноуте при наведении фотка будет чуть увеличиваться */
+.photos img:hover {
+    transform: scale(1.02);
 }
 
 footer {
