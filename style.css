@@ -1,9 +1,9 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #fff0f5; /* Нежно-розовый фон */
+    background-color: #fff0f5; /* Ніжно-рожевий фон */
     color: #333;
     text-align: center;
-    padding: 30px 10px; 
+    padding: 20px 10px; 
     margin: 0;
     display: block; 
     scroll-behavior: smooth;
@@ -19,21 +19,22 @@ header {
     margin-left: auto;
     margin-right: auto;
     width: 90%;
+    box-sizing: border-box;
 }
 
 h1 { 
     color: #d81b60; 
-    margin: 0;
-    font-size: 24px;
+    margin: 0; 
+    font-size: 24px; 
 }
 
 p { margin: 5px 0; }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    width: 100%;
+ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0 auto; 
+    width: 100%; 
 }
 
 li {
@@ -48,37 +49,39 @@ li {
     font-size: 16px;
 }
 
-/* Стили для галереи */
+/* ГАЛЕРЕЯ: Компактна сітка */
 .gallery {
     margin-top: 40px;
-    padding: 0 5px;
 }
 
 .gallery h2 {
     color: #ad1457;
     margin-bottom: 20px;
+    font-size: 22px;
 }
 
 .photos {
     display: flex;
-    flex-wrap: wrap; /* Чтобы фото переносились на новую строку */
-    justify-content: center;
-    gap: 15px;
+    flex-wrap: wrap; /* Дозволяє фото переходити на новий рядок */
+    justify-content: center; 
+    gap: 5px; /* Мінімальний відступ між фото */
+    max-width: 500px; 
+    margin: 0 auto;
 }
 
 .photos img {
-    width: 45%; /* По две фотографии в ряд на телефоне */
-    max-width: 180px; 
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    border: 3px solid white;
+    /* Робимо 3 фото в ряд на мобільному */
+    width: calc(33.33% - 5px); 
+    aspect-ratio: 1 / 1; /* Квадратні фото */
+    object-fit: cover; /* Фото не стискаються, а обрізаються під квадрат */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 2px solid white;
     box-sizing: border-box;
-    object-fit: cover; /* Чтобы фото не сплющивались */
-    height: 180px; /* Одинаковая высота для красоты */
 }
 
 footer {
-    padding: 20px;
+    padding: 30px 20px;
     border-top: 1px solid rgba(216, 27, 96, 0.1);
     margin-top: 40px;
 }
@@ -95,6 +98,7 @@ footer p {
     color: #d81b60;
     text-decoration: none;
     font-size: 18px;
+    font-weight: bold;
 }
 
 .contact-link:hover {
