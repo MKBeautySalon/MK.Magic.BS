@@ -1,83 +1,50 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fff0f5;
-    color: #333;
-    text-align: center;
-    padding: 20px 0;
-    margin: 0;
-}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK.Magic.BS — Салон краси</title>
+    <link rel="stylesheet" href="style.css?v=2"> 
+</head>
+<body>
+    <header>
+        <h1>MK Magic</h1>
+        <p>Beauty Salon</p>
+    </header>
 
-header {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin: 0 auto 30px auto;
-    width: 90%;
-    max-width: 400px;
-    box-sizing: border-box;
-}
+    <section id="services">
+        <h2>Манікюрні послуги</h2>
+        <ul>
+            <li>Манікюр гігієнічний — 400₴</li>
+            <li>Манікюр покриття гель-лак від — 700₴</li>
+            <li>Педикюр гігієна — 500₴</li>
+            <li>Педикюр покриття гель-лак — 700₴</li>
+        </ul>
+    </section>
 
-h1 { color: #d81b60; margin: 0; font-size: 24px; }
+    <section class="gallery">
+        <h2>Результати робіт</h2>
+        <div class="photos">
+            <img src="1.jpg" alt="Робота 1">
+            <img src="2.jpg" alt="Робота 2">
+            <img src="3.jpg" alt="Робота 3">
+            <img src="4.jpg" alt="Робота 4">
+            <img src="5.jpg" alt="Робота 5">
+            <img src="6.jpg" alt="Робота 6">
+            <img src="7.jpg" alt="Робота 7">
+            <img src="8.jpg" alt="Робота 8">
+            <img src="9.jpg" alt="Робота 9">
+            <img src="10.jpg" alt="Робота 10">
+            <img src="11.jpg" alt="Робота 11">
+            <img src="12.jpg" alt="Робота 12">
+        </div>
+    </section>
 
-ul { list-style: none; padding: 0; margin: 0 auto; width: 90%; }
-
-li {
-    background: white;
-    margin: 10px auto;
-    padding: 15px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 400px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    box-sizing: border-box;
-}
-
-/* ГАЛЕРЕЯ: 3 в ряд везде */
-.gallery {
-    margin-top: 40px;
-    width: 100%;
-}
-
-.gallery h2 {
-    color: #ad1457;
-    margin-bottom: 20px;
-}
-
-.photos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    max-width: 800px; /* Оптимально для ноута */
-    margin: 0 auto;
-    padding: 0 5px;
-    box-sizing: border-box;
-}
-
-.photos img {
-    /* Ровно по 3 в ряд */
-    width: calc(33.33% - 10px); 
-    margin: 5px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    background-color: #ddd; /* Серый фон, пока фото грузится */
-    box-sizing: border-box;
-}
-
-footer {
-    padding: 30px 10px;
-    border-top: 1px solid rgba(216, 27, 96, 0.1);
-    margin-top: 40px;
-}
-
-.contact-link {
-    display: inline-block;
-    margin: 8px 0;
-    color: #d81b60;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
+    <footer>
+        <p>Наші контакти:</p>
+        <a href="tel:+380637082062" class="contact-link">📞 +380 (63) 708-20-62</a>
+        <br>
+        <a href="https://www.instagram.com/mk_magic_b.s?utm_source=qr&igsh=NW1iNXp5YjA3ZnFj" target="_blank" class="contact-link">📸 Наш Instagram</a>
+    </footer>
+</body>
+</html>
