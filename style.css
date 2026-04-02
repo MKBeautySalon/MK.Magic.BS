@@ -1,12 +1,10 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #fff0f5; /* Ніжно-рожевий фон */
+    background-color: #fff0f5;
     color: #333;
     text-align: center;
-    padding: 20px 10px; 
+    padding: 20px 0; /* Убрал боковые отступы у body, чтобы сетка была шире */
     margin: 0;
-    display: block; 
-    scroll-behavior: smooth;
 }
 
 header {
@@ -14,93 +12,73 @@ header {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 30px auto;
     width: 90%;
+    max-width: 400px;
     box-sizing: border-box;
 }
 
-h1 { 
-    color: #d81b60; 
-    margin: 0; 
-    font-size: 24px; 
-}
+h1 { color: #d81b60; margin: 0; font-size: 24px; }
 
-p { margin: 5px 0; }
-
-ul { 
-    list-style: none; 
-    padding: 0; 
-    margin: 0 auto; 
-    width: 100%; 
-}
+ul { list-style: none; padding: 0; margin: 0 auto; width: 90%; }
 
 li {
     background: white;
     margin: 10px auto;
     padding: 15px;
     border-radius: 10px;
-    width: 90%;
+    width: 100%;
     max-width: 400px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     box-sizing: border-box;
     font-size: 16px;
 }
 
-/* ГАЛЕРЕЯ: Компактна сітка */
+/* ГАЛЕРЕЯ: Сетка 3х4 (по 3 в ряд везде) */
 .gallery {
     margin-top: 40px;
+    width: 100%;
 }
 
 .gallery h2 {
     color: #ad1457;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-size: 22px;
 }
 
 .photos {
     display: flex;
-    flex-wrap: wrap; /* Дозволяє фото переходити на новий рядок */
-    justify-content: center; 
-    gap: 5px; /* Мінімальний відступ між фото */
-    max-width: 500px; 
+    flex-wrap: wrap; /* Разрешаем перенос */
+    justify-content: flex-start; /* Фото прижимаются к левому краю, заполняя ряды */
+    width: 100%;
+    max-width: 600px; /* Ограничил общую ширину, чтобы на компе не было слишком растянуто */
     margin: 0 auto;
+    padding: 0 5px; /* Небольшой отступ от краев экрана */
+    box-sizing: border-box;
 }
 
 .photos img {
-    /* Робимо 3 фото в ряд на мобільному */
-    width: calc(33.33% - 5px); 
-    aspect-ratio: 1 / 1; /* Квадратні фото */
-    object-fit: cover; /* Фото не стискаються, а обрізаються під квадрат */
-    border-radius: 5px;
+    /* Ровно 1/3 ширины за вычетом зазоров */
+    width: calc(33.33% - 4px); 
+    margin: 2px; /* Маленький отступ между фото */
+    aspect-ratio: 1 / 1; /* Делаем идеальные квадраты */
+    object-fit: cover; /* Чтобы фото не деформировались */
+    border-radius: 4px; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border: 2px solid white;
     box-sizing: border-box;
 }
 
 footer {
-    padding: 30px 20px;
+    padding: 30px 10px;
     border-top: 1px solid rgba(216, 27, 96, 0.1);
     margin-top: 40px;
 }
 
-footer p {
-    font-weight: bold;
-    color: #ad1457;
-    margin-bottom: 10px;
-}
-
 .contact-link {
     display: inline-block;
-    margin: 10px 0;
+    margin: 8px 0;
     color: #d81b60;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-}
-
-.contact-link:hover {
-    text-decoration: underline;
 }
