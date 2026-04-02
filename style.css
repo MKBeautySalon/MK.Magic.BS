@@ -3,7 +3,9 @@ body {
     background-color: #fff0f5; /* Нежно-розовый фон */
     color: #333;
     text-align: center;
-    padding: 50px;
+    padding: 50px 20px; /* Немного изменил отступы для мобилок */
+    margin: 0;
+    display: block; 
 }
 
 header {
@@ -11,9 +13,25 @@ header {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
 }
 
 h1 { color: #d81b60; } /* Яркий розовый для заголовка */
+
+/* Стили для списка, чтобы он уходил вниз */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 350px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
 
 button {
     background-color: #d81b60;
@@ -23,6 +41,32 @@ button {
     border-radius: 25px;
     cursor: pointer;
     font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 40px; /* Добавил отступ до футера */
 }
 
-button:hover { background-color: #ad1457; } /* Темнеет при наведении */
+button:hover { background-color: #ad1457; }
+
+/* Стили для подвала (контактов) */
+footer {
+    padding: 20px;
+    border-top: 1px solid rgba(216, 27, 96, 0.1);
+}
+
+footer p {
+    font-weight: bold;
+    color: #ad1457;
+    margin-bottom: 10px;
+}
+
+.contact-link {
+    display: inline-block;
+    margin: 5px 0;
+    color: #d81b60;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
