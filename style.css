@@ -3,7 +3,7 @@ body {
     background-color: #fff0f5;
     color: #333;
     text-align: center;
-    padding: 20px 0; /* Убрал боковые отступы у body, чтобы сетка была шире */
+    padding: 20px 0;
     margin: 0;
 }
 
@@ -34,7 +34,7 @@ li {
     font-size: 16px;
 }
 
-/* ГАЛЕРЕЯ: Сетка 3 в ряд везде */
+/* ГАЛЕРЕЯ: Всегда 3 в ряд */
 .gallery {
     margin-top: 40px;
     width: 100%;
@@ -42,8 +42,7 @@ li {
 
 .gallery h2 {
     color: #ad1457;
-    margin-bottom: 15px;
-    font-size: 22px;
+    margin-bottom: 20px;
 }
 
 .photos {
@@ -51,29 +50,29 @@ li {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    /* Увеличил до 900px, чтобы на ноуте фотки были крупнее и в ряд */
-    max-width: 900px; 
+    max-width: 1000px; /* Увеличил, чтобы на ноуте было широко */
     margin: 0 auto;
     padding: 0 5px;
     box-sizing: border-box;
 }
 
 .photos img {
-    /* Ровно по 3 в ряд (минус отступы) */
+    /* Жестко 33% ширины минус маленькие отступы */
     width: calc(33.33% - 10px); 
     margin: 5px;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1; /* Квадраты */
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     border: 2px solid white;
     box-sizing: border-box;
-    transition: transform 0.2s; /* Эффект при наведении мышкой */
+    transition: transform 0.2s;
 }
 
-/* На ноуте при наведении фотка будет чуть увеличиваться */
+/* Эффект для мышки (ноутбук) */
 .photos img:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
+    z-index: 10;
 }
 
 footer {
