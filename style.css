@@ -3,11 +3,9 @@ body {
     background-color: #fff0f5; /* Нежно-розовый фон */
     color: #333;
     text-align: center;
-    /* Уменьшаем боковые отступы, чтобы на телефоне было больше места для контента */
     padding: 30px 10px; 
     margin: 0;
     display: block; 
-    /* Плавная прокрутка */
     scroll-behavior: smooth;
 }
 
@@ -17,7 +15,6 @@ header {
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     margin-bottom: 30px;
-    /* Чтобы шапка была по центру и не на весь экран на ПК */
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -27,14 +24,11 @@ header {
 h1 { 
     color: #d81b60; 
     margin: 0;
-    font-size: 24px; /* Оптимальный размер для телефона */
+    font-size: 24px;
 }
 
-p {
-    margin: 5px 0;
-}
+p { margin: 5px 0; }
 
-/* Стили для списка, чтобы он уходил вниз */
 ul {
     list-style: none;
     padding: 0;
@@ -47,39 +41,46 @@ li {
     margin: 10px auto;
     padding: 15px;
     border-radius: 10px;
-    /* На телефоне карточка займет почти всю ширину, на ПК — максимум 400px */
     width: 90%;
     max-width: 400px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    /* Чтобы внутренние отступы не увеличивали ширину элемента */
     box-sizing: border-box;
     font-size: 16px;
 }
 
-button {
-    background-color: #d81b60;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 18px;
-    margin-top: 20px;
-    margin-bottom: 40px; /* Отступ до футера */
-    width: 80%;
-    max-width: 300px;
-    transition: background-color 0.3s;
+/* Стили для галереи */
+.gallery {
+    margin-top: 40px;
+    padding: 0 5px;
 }
 
-button:hover { 
-    background-color: #ad1457; 
+.gallery h2 {
+    color: #ad1457;
+    margin-bottom: 20px;
 }
 
-/* Стили для подвала (контактов) */
+.photos {
+    display: flex;
+    flex-wrap: wrap; /* Чтобы фото переносились на новую строку */
+    justify-content: center;
+    gap: 15px;
+}
+
+.photos img {
+    width: 45%; /* По две фотографии в ряд на телефоне */
+    max-width: 180px; 
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    border: 3px solid white;
+    box-sizing: border-box;
+    object-fit: cover; /* Чтобы фото не сплющивались */
+    height: 180px; /* Одинаковая высота для красоты */
+}
+
 footer {
     padding: 20px;
     border-top: 1px solid rgba(216, 27, 96, 0.1);
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 footer p {
@@ -93,7 +94,7 @@ footer p {
     margin: 10px 0;
     color: #d81b60;
     text-decoration: none;
-    font-size: 18px; /* Увеличил, чтобы было удобно нажимать пальцем */
+    font-size: 18px;
 }
 
 .contact-link:hover {
